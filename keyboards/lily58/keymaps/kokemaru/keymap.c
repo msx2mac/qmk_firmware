@@ -87,9 +87,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * | ~    |      |      |      |      |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | Tab  |      |      |      |      |      |                    |      | Home | End  | Ins  |      |      |
+ * | Tab  |      |      |      |      |      |                    | Ins  | Home | Up   | End  |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |LCTRL |      |      |      |      |      |-------.    ,-------|Pause | Left | Down |  Up  |Right |      |
+ * |LCTRL |      |      |      |      |      |-------.    ,-------|Pause | Left | Down |Right |      |      |
  * |------+------+------+------+------+------|BackSP |    | DEL   |------+------+------+------+------+------|
  * |LShift|      |      |      |      |      |-------|    |-------|      |PageUp|PageDN|      |      |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
@@ -99,8 +99,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_RAISE] = LAYOUT( \
   _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
-  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    XXXXXXX, KC_HOME, KC_END,  KC_INS,  XXXXXXX, XXXXXXX, \
-  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    KC_PAUS, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX, \
+  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    KC_INS,  KC_HOME, KC_UP,   KC_END,  XXXXXXX, XXXXXXX, \
+  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    KC_PAUS, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX, \
   _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______,  XXXXXXX, KC_PGUP, KC_PGDN, XXXXXXX, XXXXXXX, XXXXXXX, \
                              _______, _______, _______, _______, _______,  _______, _______, _______\
 ),

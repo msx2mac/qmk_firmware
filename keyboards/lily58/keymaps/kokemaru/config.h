@@ -44,6 +44,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLIGHT_SAT_STEP 17
 #define RGBLIGHT_VAL_STEP 17
 
+// for iPad
+#define USB_MAX_POWER_CONSUMPTION 100
+
 // Underglow
 /*
 #undef RGBLED_NUM

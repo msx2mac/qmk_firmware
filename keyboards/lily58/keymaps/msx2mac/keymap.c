@@ -47,11 +47,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* QWERTY
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * | KANJI|  F1  |  F2  |  F3  |  F4  |  F5  |                    |  F6  |  F7  |  F8  |  F9  | F10  |  -   |
+ * | KANJI|  1   |  2   |  3   |  4   |  5   |                    |  6   |  7   |  8   |  9   |  0   |  -   |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | Tab  |   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  |  BS  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |LCTRL |   A  |   S  |   D  |   F  |   G  |-------.    ,-------|   H  |   J  |   K  |   L  |   ;  |  :   |
+ * |LCTRL |   A  |   S  |   D  |   F  |   G  |-------.    ,-------|   H  |   J  |   K  |   L  |   ;  |Enter|
  * |------+------+------+------+------+------|  [    |    |  ]    |------+------+------+------+------+------|
  * |LShift|   Z  |   X  |   C  |   V  |   B  |-------|    |-------|   N  |   M  |   ,  |   .  |   /  |  \   |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
@@ -60,53 +60,53 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                   `----------------------------'           '------''--------------------'
  */
 [_QWERTY] = LAYOUT( \
-  JP_ZHTG,  KC_F1,  KC_F2,  KC_F3,   KC_F4,   KC_F5,                      KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_MINS, \
+  JP_ZHTG,  KC_1,   KC_2,   KC_3,    KC_4,    KC_5,                       KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS, \
   KC_TAB,   KC_Q,   KC_W,   KC_E,    KC_R,    KC_T,                       KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC, \
-  KC_LCTRL, KC_A,   KC_S,   KC_D,    KC_F,    KC_G,                       KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, JP_COLN, \
+  KC_LCTRL, KC_A,   KC_S,   KC_D,    KC_F,    KC_G,                       KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_ENT, \
   KC_LSFT,  KC_Z,   KC_X,   KC_C,    KC_V,    KC_B,    JP_LBRC, JP_RBRC,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, JP_BSLS, \
-                            KC_LALT, TT_LOW,  KC_LGUI, KC_SPC,  KC_ENT,   TT_RAI,  KC_RGUI, KC_DEL \
+                            KC_LALT, KC_LGUI, TT_LOW,  KC_SPC,  KC_ENT,   TT_RAI,  KC_RGUI, KC_DEL \
 ),
 /* LOWER
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * | ESC  |  F11 |  F12 |      |      |      |                    |      |      |      |      |      |      |
+ * | ESC  |  F1  |  F2  |  F3  |  F4  |  F5  |                    |  F6  |  F7  |  F8  |  F9  |  F10 | F11  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | Tab  |  1   |  2   |  3   |  4   |  5   |                    |  6   |   7  |   8  |   9  |  0   |  -   |
+ * | Tab  |  1   |  2   |  3   |  4   |  5   |                    |  6   |   7  |   8  |   9  |  0   |  F12 |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |LCTRL |  !   |  "  |  #    |  $   |  %   |-------.    ,-------|  &   |  '   |   (  |   )  |  ^   |  \   |
  * |------+------+------+------+------+------|  [    |    |  ]    |------+------+------+------+------+------|
  * |LShift|      |     |      |      |       |-------|    |-------|      |      |      |      |      |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LAlt | LGUI | LOWER| /Space  /       \Enter \  |RAISE | RGUI | Del  |
- *                   |      |      | LOCK |/       /         \      \ |LOCK  |      |      |
+ *                   |      |      |KC_H LOCK |/       /         \      \ |LOCK  |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
 [_LOWER] = LAYOUT( \
-  KC_ESC,  KC_F11,  KC_F12, XXXXXXX, XXXXXXX, XXXXXXX,                    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
-  _______, KC_1,    KC_2,   KC_3,    KC_4,    KC_5,                       KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS, \
+  KC_ESC,  KC_F1,   KC_F2,  KC_F3,   KC_F4,   KC_F5,                      KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11, \
+  _______, KC_1,    KC_2,   KC_3,    KC_4,    KC_5,                       KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_F12, \
   _______, JP_EXLM, JP_DQT, JP_HASH, JP_DLR,  JP_PERC,                    JP_AMPR, JP_QUOT, JP_LPRN, JP_RPRN, JP_CIRC, JP_YEN, \
-  _______, XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______,  XXXXXXX,  XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
-                            _______, _______, _______, _______, _______,  _______, _______, _______\
+  _______, XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______,  XXXXXXX, XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
+                            _______, _______, TO_QWE,  _______, _______,  TO_QWE,  _______, _______\
 ),
 /* RAISE
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * | ESC  |      |      |      |      |      |                    |      |      |      |      |      |      |
+ * | ESC  |      |      |      |      |      |                    | Ins  |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | Tab  |      |      |      |      |      |                    | Ins  | Home | Up   | End  |      |      |
+ * | Tab  |      |      |      |      |      |                    |Pause | Home | End  |      |      | @   |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |LCTRL |      |      |      |      |      |-------.    ,-------|Pause | Left | Down |Right |      |      |
+ * |LCTRL |      |      |      |      |      |-------.    ,-------| Left | Down | Up   |Right |RCTRL | :    |
  * |------+------+------+------+------+------|  [    |    |  ]    |------+------+------+------+------+------|
- * |LShift|      |      |      |      |      |-------|    |-------| NUM  |PageUp|PageDN|      |      |      |
+ * |LShift|      |      |      |      |      |-------|    |-------| NUM  |PageDN|PageUP|      |      |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LAlt | LGUI | LOWER| /Space  /       \Enter \  |RAISE | RGUI | Del  |
  *                   |      |      | LOCK |/       /         \      \ |LOCK  |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
 [_RAISE] = LAYOUT( \
-  KC_ESC,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
-  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    KC_INS,  KC_HOME, KC_UP,   KC_END,  XXXXXXX, XXXXXXX, \
-  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    KC_PAUS, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX, \
-  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______,  TO_NUM,  KC_PGUP, KC_PGDN, XXXXXXX, XXXXXXX, XXXXXXX, \
-                             _______, _______, _______, _______, _______,  _______, _______, _______\
+  KC_ESC,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    KC_INS,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
+  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    KC_PAUS, KC_HOME, XXXXXXX, KC_END,  XXXXXXX,  JP_AT, \
+  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_LCTRL, JP_COLN, \
+  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______,  TO_NUM,  KC_PGDN, KC_PGUP, XXXXXXX, XXXXXXX, XXXXXXX, \
+                             _______, _______, TO_QWE,  _______, _______,  TO_QWE,  _______, _______\
 ),
 /* ADJUST
  * ,-----------------------------------------.                    ,-----------------------------------------.

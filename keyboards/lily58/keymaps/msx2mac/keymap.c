@@ -51,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | Tab  |   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  |  BS  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |LCTRL |   A  |   S  |   D  |   F  |   G  |-------.    ,-------|   H  |   J  |   K  |   L  |   ;  |Enter|
+ * |LCTRL |   A  |   S  |   D  |   F  |   G  |-------.    ,-------|   H  |   J  |   K  |   L  |   ;  |Enter |
  * |------+------+------+------+------+------|  [    |    |  ]    |------+------+------+------+------+------|
  * |LShift|   Z  |   X  |   C  |   V  |   B  |-------|    |-------|   N  |   M  |   ,  |   .  |   /  |  \   |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
@@ -68,22 +68,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 /* LOWER
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * | ESC  |  F1  |  F2  |  F3  |  F4  |  F5  |                    |  F6  |  F7  |  F8  |  F9  |  F10 | F11  |
+ * | ESC  |  F1  |  F2  |  F3  |  F4  |  F5  |                    |  F6  |  F7  |  F8  |  F9  |  F10 |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | Tab  |  1   |  2   |  3   |  4   |  5   |                    |  6   |   7  |   8  |   9  |  0   |  F12 |
+ * | Tab  |  F11 |  F12 |      |      |      |                    |      |      |      |      |      |  @   |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |LCTRL |  !   |  "  |  #    |  $   |  %   |-------.    ,-------|  &   |  '   |   (  |   )  |  ^   |  \   |
+ * |LCTRL |  1   |  2   |  3   |  4   |  5   |-------.    ,-------|  6   |   7  |   8  |   9  |  0   |  :   |
  * |------+------+------+------+------+------|  [    |    |  ]    |------+------+------+------+------+------|
  * |LShift|      |     |      |      |       |-------|    |-------|      |      |      |      |      |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LAlt | LGUI | LOWER| /Space  /       \Enter \  |RAISE | RGUI | Del  |
- *                   |      |      |KC_H LOCK |/       /         \      \ |LOCK  |      |      |
+ *                   |      |      | LOCK |/       /         \      \ |LOCK  |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
 [_LOWER] = LAYOUT( \
-  KC_ESC,  KC_F1,   KC_F2,  KC_F3,   KC_F4,   KC_F5,                      KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11, \
-  _______, KC_1,    KC_2,   KC_3,    KC_4,    KC_5,                       KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_F12, \
-  _______, JP_EXLM, JP_DQT, JP_HASH, JP_DLR,  JP_PERC,                    JP_AMPR, JP_QUOT, JP_LPRN, JP_RPRN, JP_CIRC, JP_YEN, \
+  KC_ESC,  KC_F1,   KC_F2,  KC_F3,   KC_F4,   KC_F5,                      KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  XXXXXXX, \
+  _______, KC_F11,  KC_F12, XXXXXXX, XXXXXXX, XXXXXXX,                    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, JP_AT, \
+  _______, KC_1,    KC_2,   KC_3,    KC_4,    KC_5,                       KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    JP_COLN, \
   _______, XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______,  XXXXXXX, XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
                             _______, _______, TO_QWE,  _______, _______,  TO_QWE,  _______, _______\
 ),
@@ -91,9 +91,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * | ESC  |      |      |      |      |      |                    | Ins  |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | Tab  |      |      |      |      |      |                    |Pause | Home | End  |      |      | @   |
+ * | Tab  |      |      |      |      |      |                    |Pause | Home | End  |      |      | DEL  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |LCTRL |      |      |      |      |      |-------.    ,-------| Left | Down | Up   |Right |RCTRL | :    |
+ * |LCTRL |      |      |      |      |      |-------.    ,-------| Left | Down | Up   |Right |RCTRL |      |
  * |------+------+------+------+------+------|  [    |    |  ]    |------+------+------+------+------+------|
  * |LShift|      |      |      |      |      |-------|    |-------| NUM  |PageDN|PageUP|      |      |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
@@ -103,8 +103,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_RAISE] = LAYOUT( \
   KC_ESC,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    KC_INS,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
-  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    KC_PAUS, KC_HOME, XXXXXXX, KC_END,  XXXXXXX,  JP_AT, \
-  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_LCTRL, JP_COLN, \
+  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    KC_PAUS, KC_HOME, KC_END,  XXXXXXX, XXXXXXX,  KC_DEL, \
+  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_LCTRL, XXXXXXX, \
   _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______,  TO_NUM,  KC_PGDN, KC_PGUP, XXXXXXX, XXXXXXX, XXXXXXX, \
                              _______, _______, TO_QWE,  _______, _______,  TO_QWE,  _______, _______\
 ),

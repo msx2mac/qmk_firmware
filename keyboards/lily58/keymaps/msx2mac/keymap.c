@@ -40,8 +40,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 * CTL = Control
 */
 
-#define TT_LOW TT(_LOWER)
-#define TT_RAI TT(_RAISE)
+#define TT_LOW MO(_LOWER)
+#define TT_RAI MO(_RAISE)
 #define TO_QWE TO(_QWERTY)
 #define TO_NUM TO(_NUMERIC)
 
@@ -76,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|  [    |    |  ]    |------+------+------+------+------+------|
  * |LShift|  !   |  @  |  #   |  $   |  %    |-------|    |-------|  ^   |  &   |  *   |  (   |  )   |  _   |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *                   | LGUI | LAlt | LOWER| /Space  /       \Enter \  |RAISE | RGUI | Del  |
+ *                   | LGUI | LAlt | LOWER| /Space  /       \Space \  |RAISE | RCTRL| RShift|
  *                   |      |      | LOCK |/       /         \      \ |LOCK  |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
@@ -97,7 +97,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|  [    |    |  ]    |------+------+------+------+------+------|
  * |LShift|      |      |      |      |      |-------|    |-------| NUM  |PageDN|PageUP|      |CTLPUP|CTLPDN|
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *                   | LAlt | LGUI | LOWER| /Space  /       \Enter \  |RAISE | RGUI | Del  |
+ *                   | LGUI | LAlt | LOWER| /Space  /       \Space \  |RAISE | RCTRL| RShift|
  *                   |      |      | LOCK |/       /         \      \ |LOCK  |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
@@ -118,7 +118,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
  * |      |      |      |      |      |      |-------|    |-------|      | VOL- | TRA- | BRI- |      |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *                   | LAlt | LGUI | LOWER| /Space  /       \Enter \  |RAISE | RGUI | Del  |
+ *                   | LGUI | LAlt | LOWER| /Space  /       \Space \  |RAISE | RCTRL| RShift|
  *                   |      |      | LOCK |/       /         \      \ |LOCK  |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
@@ -139,7 +139,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|  [    |    |  ]    |------+------+------+------+------+------|
  * |LShift|      |PageUp|PageDN|      |     |-------|    |-------|   0  |   1  |   2  |   3  |Enter |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *                   | LAlt | LGUI | LOWER| /Space  /       \Enter \  |RAISE | RGUI | Del  |
+ *                   | LGUI | LAlt | LOWER| /Space  /       \Space \  |RAISE | RCTRL| RShift|
  *                   |      |      | LOCK |/       /         \      \ |LOCK  |      |      |
  *                   `----------------------------'           '------''--------------------'
  */

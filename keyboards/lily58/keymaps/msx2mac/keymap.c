@@ -70,9 +70,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * | ESC  |  F1  |  F2  |  F3  |  F4  |  F5  |                    |  F6  |  F7  |  F8  |  F9  |  F10 | F11  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | Tab  |  1   |  2   |  3   |  4   |  5   |                    |  +   |  -   |  =   |  ~   |  |   | F12  |
+ * | Tab  |  1   |  2   |  3   |  4   |  5   |                    |  +   |  -   |  =   |  ~   |  -   | F12  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |LCTRL |  6   |  7   |  8   |  9   |  0   |-------.    ,-------| YEN  |  '   |  "   |      |  :   |  :   |
+ * |LCTRL |  6   |  7   |  8   |  9   |  0   |-------.    ,-------| YEN  |  '   |  "   |      |  :   |  |   |
  * |------+------+------+------+------+------|  [    |    |  ]    |------+------+------+------+------+------|
  * |LShift|  !   |  @  |  #   |  $   |  %    |-------|    |-------|  ^   |  &   |  *   |  (   |  )   |  _   |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
@@ -82,8 +82,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_LOWER] = LAYOUT( \
   KC_ESC,  KC_F1,   KC_F2,  KC_F3,   KC_F4,   KC_F5,                      KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11, \
-  _______, KC_1,    KC_2,   KC_3,    KC_4,    KC_5,                       JP_PLUS, JP_MINS, JP_EQL,  JP_TILD, JP_PIPE, KC_F12, \
-  _______, KC_6,    KC_7,   KC_8,    KC_9,    KC_0,                       JP_YEN,  JP_QUOT, JP_DQUO, XXXXXXX, JP_COLN, JP_COLN, \
+  _______, KC_1,    KC_2,   KC_3,    KC_4,    KC_5,                       JP_PLUS, JP_MINS, JP_EQL,  JP_TILD, KC_MINS, KC_F12, \
+  _______, KC_6,    KC_7,   KC_8,    KC_9,    KC_0,                       JP_YEN,  JP_QUOT, JP_DQUO, XXXXXXX, JP_COLN, JP_PIPE, \
   _______, KC_EXLM ,JP_AT,  KC_HASH, KC_DLR,  KC_PERC, _______, _______,  JP_CIRC, JP_AMPR, JP_ASTR, JP_LPRN, JP_RPRN, JP_UNDS, \
                             _______, _______, TO_QWE,  _______, KC_ENT,   TO_QWE,  _______, _______\
 ),

@@ -47,6 +47,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // for iPad
 #define USB_MAX_POWER_CONSUMPTION 100
 
+#define NO_ACTION_MACRO
+#define NO_ACTION_FUNCTION
+
 // Underglow
 /*
 #undef RGBLED_NUM

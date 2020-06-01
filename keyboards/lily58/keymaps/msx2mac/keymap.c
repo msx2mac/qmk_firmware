@@ -101,23 +101,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 /* RAISE win
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * | ESC  |      |      |      |      |      |                    | Ins  |      |      |      |      |      |
+ * | ESC  |      |      |      |      |      |                    | Ins  |      |      |      |      |CTL W |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | Tab  |  6   |  7   |  8   |  9   |  0   |                    |Pause | Home | End  |      |      | DEL  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |LCTRL |  1   |  2   |  3   |  4   |  5   |-------.    ,-------| Left | Down | Up   |Right |      |RCTRL |
  * |------+------+------+------+------+------|  [    |    |CTL R  |------+------+------+------+------+------|
- * |LShift|DMREC1|DMREC2|DMPLY1|DMPLY2|DMRSTP|-------|    |-------| NUM  |PageDN|PageUP|CTLPUP|CTLPDN|CTL W |
+ * |LShift|DMREC1|DMREC2|DMPLY1|DMPLY2|DMRSTP|-------|    |-------| NUM  |PageDN|PageUP|CTLPUP|CTLPDN|      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | iPad | LAlt | LOWER| /Space  /       \Space \  |RAISE | RCTRL| RShift|
  *                   |      |      | LOCK |/       /         \      \ |LOCK  |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
 [_RAISE] = LAYOUT( \
-  KC_ESC,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    KC_INS,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
+  KC_ESC,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    KC_INS,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LCTL(KC_W), \
   _______, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,                       KC_PAUS, KC_HOME, KC_END,  XXXXXXX, XXXXXXX, KC_DEL, \
   _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                       KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX, KC_LCTRL, \
-  _______, DM_REC1, DM_REC2, DM_PLY1, DM_PLY2, DM_RSTP  , _______, LCTL(KC_R),  TO_NUM,  KC_PGDN, KC_PGUP, LCTL(KC_PGUP), LCTL(KC_PGDN), LCTL(KC_W), \
+  _______, DM_REC1, DM_REC2, DM_PLY1, DM_PLY2, DM_RSTP  , _______, LCTL(KC_R),  TO_NUM,  KC_PGDN, KC_PGUP, LCTL(KC_PGUP), LCTL(KC_PGDN), XXXXXXX, \
                              DF(_QWERTY_A), _______, TO_QWE,  _______, _______,  TO_QWE,  _______, _______\
 ),
 /* ADJUST
@@ -208,23 +208,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 /* RAISE iPad
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * | ESC  |      |      |      |      |      |                    | Ins  |      |      |      |      |      |
+ * | ESC  |      |      |      |      |      |                    | Ins  |      |      |      |      |CTL W|
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | Tab  |  6   |  7   |  8   |  9   |  0   |                    |Pause | Home | End  |      |      | DEL  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |LCTRL |  1   |  2   |  3   |  4   |  5   |-------.    ,-------| Left | Down | Up   |Right |      |RCTRL |
  * |------+------+------+------+------+------|  [    |    |CTRL R |------+------+------+------+------+------|
- * |LShift|DMREC1|DMREC2|DMPLY1|DMPLY2|DMRSTP|-------|    |-------| NUM  |PageDN|PageUP|CTLPUP|CTLPDN|CTL W |
+ * |LShift|DMREC1|DMREC2|DMPLY1|DMPLY2|DMRSTP|-------|    |-------| NUM  |PageDN|PageUP|CTLPUP|CTLPDN|      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | Win | LAlt | LOWER| /Space  /       \Space \  |RAISE | RCTRL| RShift|
  *                   |      |      | LOCK |/       /         \      \ |LOCK  |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
 [_RAISE_A] = LAYOUT( \
-  KC_ESC,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    KC_INS,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
+  KC_ESC,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    KC_INS,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LCTL(KC_W), \
   _______, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,                       KC_PAUS, KC_HOME, KC_END,  XXXXXXX, XXXXXXX, KC_DEL, \
   _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                       KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX, KC_LCTRL, \
-  _______, DM_REC1, DM_REC2, DM_PLY1, DM_PLY2, DM_RSTP  , _______, LCTL(KC_R),  TO_NUM,  KC_PGDN, KC_PGUP, LCTL(KC_PGUP), LCTL(KC_PGDN), LCTL(KC_W), \
+  _______, DM_REC1, DM_REC2, DM_PLY1, DM_PLY2, DM_RSTP  , _______, LCTL(KC_R),  TO_NUM,  KC_PGDN, KC_PGUP, LCTL(KC_PGUP), LCTL(KC_PGDN), XXXXXXX, \
                              DF(_QWERTY), _______, TO_QWE_A,  _______, _______,  TO_QWE_A,  _______, _______\
 ),
 /* NUMERIC iPad

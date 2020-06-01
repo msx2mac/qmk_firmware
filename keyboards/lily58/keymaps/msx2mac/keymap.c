@@ -84,8 +84,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | Tab  |  6   |  7   |  8   |  9   |  0   |                    |  YEN |  '   |  "   |  ~   |  -   | -    |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |LCTRL |  1   |  2   |  3   |  4   |  5   |-------.    ,-------|      |  +   |  -   |  =   |  :   |  |   |
- * |------+------+------+------+------+------| F11   |    |  F12 |------+------+------+------+------+------|
+ * |LCTRL |  1   |  2   |  3   |  4   |  5   |-------.    ,-------|  +   |  =   |  -   |      |  :   |  |   |
+ * |------+------+------+------+------+------| F11   |    |  F12  |------+------+------+------+------+------|
  * |LShift|  !   |  @  |  #   |  $   |  %    |-------|    |-------|  ^   |  &   |  *   |  (   |  )   |  _   |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LGUI | LAlt | LOWER| /Space  /       \Space \  |RAISE | RCTRL| RShift|
@@ -95,7 +95,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_LOWER] = LAYOUT( \
   KC_ESC,  KC_F1,   KC_F2,  KC_F3,   KC_F4,   KC_F5,                      KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  XXXXXXX, \
   _______, KC_6,    KC_7,   KC_8,    KC_9,    KC_0,                       JP_YEN,  JP_QUOT, JP_DQUO, JP_TILD, KC_MINS, KC_MINS, \
-  _______, KC_1,    KC_2,   KC_3,    KC_4,    KC_5,                       XXXXXXX, JP_PLUS, JP_MINS, JP_EQL, JP_COLN, JP_PIPE, \
+  _______, KC_1,    KC_2,   KC_3,    KC_4,    KC_5,                       JP_PLUS, JP_EQL, JP_MINS, XXXXXXX, JP_COLN, JP_PIPE, \
   _______, KC_EXLM ,JP_AT,  KC_HASH, KC_DLR,  KC_PERC, KC_F11, KC_F12,  JP_CIRC, JP_AMPR, JP_ASTR, JP_LPRN, JP_RPRN, JP_UNDS, \
                             _______, _______, TO_QWE,  _______, KC_ENT,   TO_QWE,  _______, _______\
 ),
@@ -191,7 +191,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | Tab  |  6   |  7   |  8   |  9   |  0   |                    |  YEN |  '   |  "   |  ~   |  -   | -    |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |LCTRL |  1   |  2   |  3   |  4   |  5   |-------.    ,-------|      |  +   |  -   |  =   |  :   |  |   |
+ * |LCTRL |  1   |  2   |  3   |  4   |  5   |-------.    ,-------|  +   |  =   |  -   |      |  :   |  |   |
  * |------+------+------+------+------+------|  F11  |    | F12   |------+------+------+------+------+------|
  * |LShift|  !   |  @  |  #   |  $   |  %    |-------|    |-------|  ^   |  &   |  *   |  (   |  )   |  _   |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
@@ -202,7 +202,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_LOWER_A] = LAYOUT( \
   KC_ESC,  KC_F1,   KC_F2,  KC_F3,   KC_F4,   KC_F5,                      KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  XXXXXXX, \
   _______, KC_6,    KC_7,   KC_8,    KC_9,    KC_0,                       KC_JYEN,  KC_QUOT, KC_DQUO, KC_TILD, KC_MINS, KC_MINS, \
-  _______, KC_1,    KC_2,   KC_3,    KC_4,    KC_5,                       XXXXXXX, KC_PLUS, KC_MINS, KC_EQL, KC_COLN, KC_PIPE, \
+  _______, KC_1,    KC_2,   KC_3,    KC_4,    KC_5,                       KC_PLUS, KC_EQL, KC_MINS, XXXXXXX, KC_COLN, KC_PIPE, \
   _______, KC_EXLM ,KC_AT,  KC_HASH, KC_DLR,  KC_PERC, KC_F11, KC_F12,  KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_UNDS, \
                             _______, _______, TO_QWE_A,  _______, KC_ENT,   TO_QWE_A,  _______, _______\
 ),

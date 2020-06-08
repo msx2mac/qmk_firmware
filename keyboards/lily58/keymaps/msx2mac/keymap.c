@@ -147,22 +147,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * | ESC  |      |      |      |      |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | Tab  |Home  | Up   | End  |      |      |                    |  \   |   7  |   8  |   9  |  +   |  BS  |
+ * | Tab  |Home  | Up   | End  |      |      |                    |  +   |   7  |   8  |   9  |  /   |  BS  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |LCTRL |Left  | Down | Right|      |      |-------.    ,-------| .    |   4  |   5  |   6  |  -   | Enter|
- * |------+------+------+------+------+------|  [    |    |  ]    |------+------+------+------+------+------|
- * |LShift|      |PageUp|PageDN|      |      |-------|    |-------|   0  |   1  |   2  |   3  |  *   |  /   |
+ * |LCTRL |Left  | Down | Right|      |      |-------.    ,-------|  -   |   4  |   5  |   6  | Enter| Enter|
+ * |------+------+------+------+------+------|  [    |    |  YEN  |------+------+------+------+------+------|
+ * |LShift|      |PageUp|PageDN|      |      |-------|    |-------|  *   |   1  |   2  |   3  | Enter| Enter|
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *                   | LGUI | LAlt | LOWER| /Space  /       \Space \  |RAISE | RCTRL| RShift|
- *                   |      |      | LOCK |/       /         \      \ |LOCK  |      |      |
+ *                   | LGUI | LAlt | LOWER| /Space  /       \Space \  |RAISE | 0    | .    |
+ *                   |      |      | LOCK |/       /         \      \ | 0    |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
 [_NUMERIC] = LAYOUT( \
   JP_ZHTG,  XXXXXXX, XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX,                    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
-  _______, KC_HOME, KC_UP,  KC_END,  XXXXXXX,  XXXXXXX,                   JP_YEN,  KC_7,    KC_8,    KC_9,    KC_PLUS, KC_BSPC, \
-  _______, KC_LEFT, KC_DOWN,KC_RGHT, XXXXXXX, XXXXXXX,                    KC_DOT,  KC_4,    KC_5,    KC_6,    KC_MINS, KC_ENT, \
-  _______, XXXXXXX, KC_PGUP,KC_PGDN, XXXXXXX, XXXXXXX, _______, _______,  KC_0,    KC_1,    KC_2,    KC_3,    KC_ASTR, KC_SLSH, \
-                            _______, _______, TO_QWE,  _______, _______,  MO(_RAISE),  _______, _______\
+  _______, KC_HOME, KC_UP,  KC_END,  XXXXXXX,  XXXXXXX,                   JP_PLUS,  KC_7,    KC_8,    KC_9,    JP_SLSH, KC_BSPC, \
+  _______, KC_LEFT, KC_DOWN,KC_RGHT, XXXXXXX, XXXXXXX,                    JP_MINS, KC_4,    KC_5,    KC_6,    KC_ENT, KC_ENT, \
+  _______, XXXXXXX, KC_PGUP,KC_PGDN, XXXXXXX, XXXXXXX, _______, JP_YEN,  JP_ASTR, KC_1,    KC_2,    KC_3,    KC_ENT, KC_ENT, \
+                            _______, _______, TO_QWE,  _______, _______,  LT(_RAISE, KC_0),  KC_0, KC_DOT\
 ),
 
 
@@ -233,22 +233,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * | ESC  |      |      |      |      |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | Tab  |Home  | Up   | End  |      |      |                    |  \   |   7  |   8  |   9  |  +   |  BS  |
+ * | Tab  |Home  | Up   | End  |      |      |                    |  +   |   7  |   8  |   9  |  /   |  BS  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |LCTRL |Left  | Down | Right|      |      |-------.    ,-------| .    |   4  |   5  |   6  |  -   | Enter|
- * |------+------+------+------+------+------|  [    |    |  ]    |------+------+------+------+------+------|
- * |LShift|      |PageUp|PageDN|      |      |-------|    |-------|   0  |   1  |   2  |   3  |  *   |  /   |
+ * |LCTRL |Left  | Down | Right|      |      |-------.    ,-------|  -   |   4  |   5  |   6  | Enter| Enter|
+ * |------+------+------+------+------+------|  [    |    |  YEN  |------+------+------+------+------+------|
+ * |LShift|      |PageUp|PageDN|      |      |-------|    |-------|  *   |   1  |   2  |   3  | Enter| Enter|
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *                   | LGUI | LAlt | LOWER| /Space  /       \Space \  |RAISE | RCTRL| RShift|
- *                   |      |      | LOCK |/       /         \      \ |LOCK  |      |      |
+ *                   | LGUI | LAlt | LOWER| /Space  /       \Space \  |RAISE | 0    | .    |
+ *                   |      |      | LOCK |/       /         \      \ | 0    |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
 [_NUMERIC_A] = LAYOUT( \
   KC_ESC,  XXXXXXX, XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX,                    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
-  _______, KC_HOME, KC_UP,  KC_END,  XXXXXXX,  XXXXXXX,                   KC_JYEN,  KC_7,    KC_8,    KC_9,    KC_PLUS, KC_BSPC, \
-  _______, KC_LEFT, KC_DOWN,KC_RGHT, XXXXXXX, XXXXXXX,                    KC_DOT,  KC_4,    KC_5,    KC_6,    KC_MINS, KC_ENT, \
-  _______, XXXXXXX, KC_PGUP,KC_PGDN, XXXXXXX, XXXXXXX, _______, _______,  KC_0,    KC_1,    KC_2,    KC_3,    KC_ASTR, KC_SLSH, \
-                            _______, _______, TO_QWE_A,  _______, _______,  MO(_RAISE_A),  _______, _______\
+  _______, KC_HOME, KC_UP,  KC_END,  XXXXXXX,  XXXXXXX,                   KC_PLUS,  KC_7,    KC_8,    KC_9,    KC_SLSH, KC_BSPC, \
+  _______, KC_LEFT, KC_DOWN,KC_RGHT, XXXXXXX, XXXXXXX,                    KC_MINS,  KC_4,    KC_5,    KC_6,    KC_ENT, KC_ENT, \
+  _______, XXXXXXX, KC_PGUP,KC_PGDN, XXXXXXX, XXXXXXX, _______, KC_JYEN,  KC_ASTR,  KC_1,    KC_2,    KC_3,    KC_ENT, KC_ENT, \
+                            _______, _______, TO_QWE_A,  _______, _______,  LT(_RAISE_A, KC_0),  KC_0, KC_DOT\
 ),
 };
 

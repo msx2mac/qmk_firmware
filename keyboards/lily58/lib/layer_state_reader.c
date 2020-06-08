@@ -5,9 +5,10 @@
 
 #define L_BASE 0
 #define L_LOWER 2
-#define L_RAISE 4
-#define L_ADJUST 8
+#define L_RAISE 8
+#define L_ADJUST 26
 #define L_ADJUST_TRI 14
+#define L_NUMERIC 4
 
 char layer_state_str[24];
 
@@ -23,12 +24,15 @@ const char *read_layer_state(void) {
   case L_LOWER:
     snprintf(layer_state_str, sizeof(layer_state_str), "Layer: Lower");
     break;
+  case L_NUMERIC:
+    snprintf(layer_state_str, sizeof(layer_state_str), "Layer: Numeric");
+    break;
   case L_ADJUST:
   case L_ADJUST_TRI:
     snprintf(layer_state_str, sizeof(layer_state_str), "Layer: Adjust");
     break;
   default:
-    snprintf(layer_state_str, sizeof(layer_state_str), "Layer: Undef-%ld", layer_state);
+    snprintf(layer_state_str, sizeof(layer_state_str), "Layer: ud-%ld", layer_state);
   }
 
   return layer_state_str;

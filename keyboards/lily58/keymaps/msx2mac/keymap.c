@@ -66,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * | Tab  |   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  |  BS  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |LCTRL |   A  |   S  |   D  |   F  |   G  |-------.    ,-------|   H  |   J  |   K  |   L  |   ;  |Enter |
- * |------+------+------+------+------+------|       |    |  -    |------+------+------+------+------+------|
+ * |------+------+------+------+------+------|  ESC  |    |  -    |------+------+------+------+------+------|
  * |LShift|   Z  |   X  |   C  |   V  |   B  |-------|    |-------|   N  |   M  |   ,  |   .  |   /  |  \   |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LGUI | LAlt | LOWER| /Space  /       \Space \  |RAISE | RCTRL| RShift|
@@ -77,17 +77,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   JP_ZHTG,  KC_1,   KC_2,   KC_3,    KC_4,    KC_5,                       KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS, \
   KC_TAB,   KC_Q,   KC_W,   KC_E,    KC_R,    KC_T,                       KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC, \
   KC_LCTRL, KC_A,   KC_S,   KC_D,    KC_F,    KC_G,                       KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_ENT, \
-  KC_LSFT,  KC_Z,   KC_X,   KC_C,    KC_V,    KC_B,    XXXXXXX, KC_MINS,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, JP_BSLS, \
+  KC_LSFT,  KC_Z,   KC_X,   KC_C,    KC_V,    KC_B,    KC_ESC,  KC_MINS,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, JP_BSLS, \
                             KC_LGUI, KC_LALT, TT_LOW,  KC_SPC,  KC_SPC,   TT_RAI,  KC_RCTRL, KC_RSFT\
 ),
 /* LOWER win
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * | ESC  |      |      |      |      |      |                    |      |      |      |      |      |      |
+ * | KANJI|      |      |      |      |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | Tab  |  6   |  7   |  8   |  9   |  0   |                    |  YEN |  "   |  '   |  ~   |  -   | -    |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |LCTRL |  1   |  2   |  3   |  4   |  5   |-------.    ,-------|  +   |  =   |  [   |  ]   |  :   |  |   |
- * |------+------+------+------+------+------|       |    |  -    |------+------+------+------+------+------|
+ * |------+------+------+------+------+------|  ESC  |    |  -    |------+------+------+------+------+------|
  * |LShift|  !   |  @  |  #   |  $   |  %    |-------|    |-------|  ^   |  &   |  *   |  (   |  )   |  _   |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LGUI | LAlt | LOWER| /Space  /       \Space \  |RAISE | RCTRL| RShift|
@@ -95,7 +95,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                   `----------------------------'           '------''--------------------'
  */
 [_LOWER] = LAYOUT( \
-  KC_ESC,  XXXXXXX, XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX,                    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
+  _______, XXXXXXX, XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX,                    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
   _______, KC_6,    KC_7,   KC_8,    KC_9,    KC_0,                       JP_YEN,  JP_DQUO, JP_QUOT, JP_TILD, KC_MINS, KC_MINS, \
   _______, KC_1,    KC_2,   KC_3,    KC_4,    KC_5,                       JP_PLUS, JP_EQL, JP_LBRC, JP_RBRC, JP_COLN, JP_PIPE, \
   _______, KC_EXLM ,JP_AT,  KC_HASH, KC_DLR,  KC_PERC, _______, _______,  JP_CIRC, JP_AMPR, JP_ASTR, JP_LPRN, JP_RPRN, JP_UNDS, \
@@ -103,12 +103,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 /* RAISE win
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * | ESC  | F11  | F12  |      | JIS  |  US  |                    | Ins  |      |      |      |      |CTL W |
+ * | KANJI| F11  | F12  |      | JIS  |  US  |                    | Ins  |      |      |      |      |CTL W |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | Tab  |  F6  |  F7  |  F8  |  F9  | F10  |                    |Pause | Home | End  |      |      | DEL  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |LCTRL |  F1  |  F2  |  F3  |  F4  |  F5  |-------.    ,-------| Left | Down | Up   |Right |      |RCTRL |
- * |------+------+------+------+------+------|       |    |CTL R  |------+------+------+------+------+------|
+ * |------+------+------+------+------+------|  ESC  |    |CTL R  |------+------+------+------+------+------|
  * |LShift|DMREC1|DMREC2|DMPLY1|DMPLY2|DMRSTP|-------|    |-------| NUM  |PageDN|PageUP|CTLPUP|CTLPDN|      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LGUI | LAlt | LOWER| /Space  /       \Space \  |RAISE | RCTRL| RShift|
@@ -116,7 +116,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                   `----------------------------'           '------''--------------------'
  */
 [_RAISE] = LAYOUT( \
-  KC_ESC,  KC_F11,  KC_F12,  XXXXXXX, DF(_QWERTY), DF(_QWERTY_A),                    KC_INS,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LCTL(KC_W), \
+  _______, KC_F11,  KC_F12,  XXXXXXX, DF(_QWERTY), DF(_QWERTY_A),                    KC_INS,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LCTL(KC_W), \
   _______, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,                     KC_PAUS, KC_HOME, KC_END,  XXXXXXX, XXXXXXX, KC_DEL, \
   _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                      KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX, KC_LCTRL, \
   _______, DM_REC1, DM_REC2, DM_PLY1, DM_PLY2, DM_RSTP  , _______, LCTL(KC_R),  TO_NUM,  KC_PGDN, KC_PGUP, LCTL(KC_PGUP), LCTL(KC_PGDN), XXXXXXX, \
@@ -145,12 +145,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 /* NUMERIC win
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * | ESC  |      |      |      |      |      |                    |      |      |      |      |      |      |
+ * | KANJI|      |      |      |      |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | Tab  |Home  | Up   | End  |      |      |                    |  +   |   7  |   8  |   9  |  /   |  BS  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |LCTRL |Left  | Down | Right|      |      |-------.    ,-------|  -   |   4  |   5  |   6  | Enter| Enter|
- * |------+------+------+------+------+------|  [    |    |  YEN  |------+------+------+------+------+------|
+ * |------+------+------+------+------+------|  ESC  |    |  YEN  |------+------+------+------+------+------|
  * |LShift|      |PageUp|PageDN|      |      |-------|    |-------|  *   |   1  |   2  |   3  | Enter| Enter|
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LGUI | LAlt | LOWER| /Space  /       \Space \  |RAISE | 0    | .    |
@@ -158,7 +158,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                   `----------------------------'           '------''--------------------'
  */
 [_NUMERIC] = LAYOUT( \
-  JP_ZHTG,  XXXXXXX, XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX,                    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
+  _______, XXXXXXX, XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX,                    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
   _______, KC_HOME, KC_UP,  KC_END,  XXXXXXX,  XXXXXXX,                   JP_PLUS,  KC_7,    KC_8,    KC_9,    JP_SLSH, KC_BSPC, \
   _______, KC_LEFT, KC_DOWN,KC_RGHT, XXXXXXX, XXXXXXX,                    JP_MINS, KC_4,    KC_5,    KC_6,    KC_ENT, KC_ENT, \
   _______, XXXXXXX, KC_PGUP,KC_PGDN, XXXXXXX, XXXXXXX, _______, JP_YEN,  JP_ASTR, KC_1,    KC_2,    KC_3,    KC_ENT, KC_ENT, \
@@ -173,7 +173,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * | Tab  |   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  |  BS  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |LCTRL |   A  |   S  |   D  |   F  |   G  |-------.    ,-------|   H  |   J  |   K  |   L  |   ;  |Enter |
- * |------+------+------+------+------+------|       |    |  -    |------+------+------+------+------+------|
+ * |------+------+------+------+------+------|  ESC  |    |  -    |------+------+------+------+------+------|
  * |LShift|   Z  |   X  |   C  |   V  |   B  |-------|    |-------|   N  |   M  |   ,  |   .  |   /  |  \   |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LGUI | LAlt | LOWER| /Space  /       \Space \  |RAISE | RCTRL| RShift|
@@ -184,17 +184,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_CAPS,  KC_1,   KC_2,   KC_3,    KC_4,    KC_5,                       KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS, \
   KC_TAB,   KC_Q,   KC_W,   KC_E,    KC_R,    KC_T,                       KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC, \
   KC_LCTRL, KC_A,   KC_S,   KC_D,    KC_F,    KC_G,                       KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_ENT, \
-  KC_LSFT,  KC_Z,   KC_X,   KC_C,    KC_V,    KC_B,    XXXXXXX, KC_MINS,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_BSLS, \
+  KC_LSFT,  KC_Z,   KC_X,   KC_C,    KC_V,    KC_B,    KC_ESC,  KC_MINS,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_BSLS, \
                             KC_LGUI, KC_LALT, TT_LOW_A,  KC_SPC,  KC_SPC,   TT_RAI_A,  KC_RCTRL, KC_RSFT\
 ),
 /* LOWER iPad
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * | ESC  |      |      |      |      |      |                    |      |      |      |      |      |      |
+ * | KANJI|      |      |      |      |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | Tab  |  6   |  7   |  8   |  9   |  0   |                    |  YEN |  "   |  '   |  ~   |  -   | -    |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |LCTRL |  1   |  2   |  3   |  4   |  5   |-------.    ,-------|  +   |  =   |  [   |  ]   |  :   |  |   |
- * |------+------+------+------+------+------|       |    |  -    |------+------+------+------+------+------|
+ * |------+------+------+------+------+------|  ESC  |    |  -    |------+------+------+------+------+------|
  * |LShift|  !   |  @  |  #   |  $   |  %    |-------|    |-------|  ^   |  &   |  *   |  (   |  )   |  _   |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LGUI | LAlt | LOWER| /Space  /       \Space \  |RAISE | RCTRL| RShift|
@@ -202,7 +202,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                   `----------------------------'           '------''--------------------'
  */
 [_LOWER_A] = LAYOUT( \
-  KC_ESC,  XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
+  _______, XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
   _______, KC_6,    KC_7,   KC_8,    KC_9,    KC_0,                       KC_JYEN,  KC_DQUO, KC_QUOT, KC_TILD, KC_MINS, KC_MINS, \
   _______, KC_1,    KC_2,   KC_3,    KC_4,    KC_5,                       KC_PLUS, KC_EQL, KC_LBRC, KC_RBRC, KC_COLN, KC_PIPE, \
   _______, KC_EXLM ,KC_AT,  KC_HASH, KC_DLR,  KC_PERC, _______, _______,  KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_UNDS, \
@@ -210,12 +210,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 /* RAISE iPad
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * | ESC  | F11  | F12  |      | JIS  |  US  |                    | Ins  |      |      |      |      |CTL W |
+ * | KANJI| F11  | F12  |      | JIS  |  US  |                    | Ins  |      |      |      |      |CTL W |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | Tab  |  F6  |  F7  |  F8  |  F9  | F10  |                    |Pause | Home | End  |      |      | DEL  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |LCTRL |  F1  |  F2  |  F3  |  F4  |  F5  |-------.    ,-------| Left | Down | Up   |Right |      |RCTRL |
- * |------+------+------+------+------+------|       |    |CTL R  |------+------+------+------+------+------|
+ * |------+------+------+------+------+------|  ESC  |    |CTL R  |------+------+------+------+------+------|
  * |LShift|DMREC1|DMREC2|DMPLY1|DMPLY2|DMRSTP|-------|    |-------| NUM  |PageDN|PageUP|CTLPUP|CTLPDN|      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LGUI | LAlt | LOWER| /Space  /       \Space \  |RAISE | RCTRL| RShift|
@@ -223,7 +223,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                   `----------------------------'           '------''--------------------'
  */
 [_RAISE_A] = LAYOUT( \
-  KC_ESC,  KC_F11,  KC_F12,  XXXXXXX, DF(_QWERTY), DF(_QWERTY_A),                    KC_INS,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LCTL(KC_W), \
+  _______, KC_F11,  KC_F12,  XXXXXXX, DF(_QWERTY), DF(_QWERTY_A),                    KC_INS,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LCTL(KC_W), \
   _______, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,                     KC_PAUS, KC_HOME, KC_END,  XXXXXXX, XXXXXXX, KC_DEL, \
   _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                      KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX, KC_LCTRL, \
   _______, DM_REC1, DM_REC2, DM_PLY1, DM_PLY2, DM_RSTP  , _______, LCTL(KC_R),  TO_NUM_A,  KC_PGDN, KC_PGUP, LCTL(KC_PGUP), LCTL(KC_PGDN), XXXXXXX, \
@@ -231,12 +231,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 /* NUMERIC iPad
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * | ESC  |      |      |      |      |      |                    |      |      |      |      |      |      |
+ * | KANJI|      |      |      |      |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | Tab  |Home  | Up   | End  |      |      |                    |  +   |   7  |   8  |   9  |  /   |  BS  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |LCTRL |Left  | Down | Right|      |      |-------.    ,-------|  -   |   4  |   5  |   6  | Enter| Enter|
- * |------+------+------+------+------+------|  [    |    |  YEN  |------+------+------+------+------+------|
+ * |------+------+------+------+------+------|  ESC  |    |  YEN  |------+------+------+------+------+------|
  * |LShift|      |PageUp|PageDN|      |      |-------|    |-------|  *   |   1  |   2  |   3  | Enter| Enter|
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LGUI | LAlt | LOWER| /Space  /       \Space \  |RAISE | 0    | .    |
@@ -244,7 +244,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                   `----------------------------'           '------''--------------------'
  */
 [_NUMERIC_A] = LAYOUT( \
-  KC_ESC,  XXXXXXX, XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX,                    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
+  _______, XXXXXXX, XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX,                    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
   _______, KC_HOME, KC_UP,  KC_END,  XXXXXXX,  XXXXXXX,                   KC_PLUS,  KC_7,    KC_8,    KC_9,    KC_SLSH, KC_BSPC, \
   _______, KC_LEFT, KC_DOWN,KC_RGHT, XXXXXXX, XXXXXXX,                    KC_MINS,  KC_4,    KC_5,    KC_6,    KC_ENT, KC_ENT, \
   _______, XXXXXXX, KC_PGUP,KC_PGDN, XXXXXXX, XXXXXXX, _______, KC_JYEN,  KC_ASTR,  KC_1,    KC_2,    KC_3,    KC_ENT, KC_ENT, \

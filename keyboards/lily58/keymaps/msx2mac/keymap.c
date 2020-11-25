@@ -95,7 +95,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                   `----------------------------'           '------''--------------------'
  */
 [_LOWER] = LAYOUT( \
-  KC_ESC,  XXXXXXX, XXXXXXX,XXXXXXX, XXXXXXX, JP_GRV,                    JP_CIRC, JP_AMPR, JP_ASTR, JP_LPRN, JP_RPRN, JP_UNDS, \
+  KC_ESC,  XXXXXXX, XXXXXXX,XXXXXXX, XXXXXXX, JP_GRV,                    JP_CIRC, JP_AMPR, JP_ASTR, JP_LPRN, JP_RPRN, JP_GRV, \
   _______, KC_6,    KC_7,   KC_8,    KC_9,    KC_0,                       JP_QUOT, JP_LBRC, JP_RBRC, JP_PLUS, KC_MINS, JP_TILD, \
   _______, KC_1,    KC_2,   KC_3,    KC_4,    KC_5,                       JP_DQUO, JP_LCBR, JP_RCBR, JP_EQL,  JP_COLN, JP_PIPE, \
   _______, KC_EXLM ,JP_AT,  KC_HASH, KC_DLR,  KC_PERC, _______, _______,  JP_LPRN, JP_LABK, JP_RABK, JP_RPRN, JP_QUES, JP_UNDS, \
